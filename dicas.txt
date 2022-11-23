@@ -1,0 +1,22 @@
+# Criação de uma Aplicação
+C:\gesalimento>python manage.py startapp pessoas
+# Ao criar uma aplicação deverá registrar no Projeto <alurareceita> <settings.py>
+# Ao criar o models.py Pessoa Registrar do admin.py
+# Migrar o modelo para o app pessoas <migrations> <0001_initial.py>
+C:\gesalimento>python manage.py makemigrations
+# Migrar para o bd
+C:\gesalimento>python manage.py migrate
+# Se houver uma alteração na tabela tem que executar novamente <makemigrations>
+python manage.py makemigrations
+# Será feita duas perguntas.
+# 1-Provide a one-off default now (will be set on all existing rows with a null value for this column)
+# 2-Quit and manually define a default value in models.py.
+# Colocar a primeira opção e colocar uma string vazia ''.
+# Apos a execução migrar para o banco de dados.
+# C:\gesalimento>python manage.py migrate
+# Para Trabalhar com Media temos que registrar o caminho no Projeto <alurareceita> <settings.py>
+# Para trabalhar com media install Pillow
+python -m pip install Pillow
+# Ordenação de Mais de um Filtro
+# Receita.objects.order_by('-data_receita').filter(publicada=True).filter(tempo_preparo=10)
+# Observação: As fotos pode está em outra pasta, quando colocar na base a aplicação cria a pasta media\fotos\21\11\22
